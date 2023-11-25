@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgclkphfn2cs8"]
+[gd_scene load_steps=3 format=3 uid="uid://dgclkphfn2cs8"]
 
 [ext_resource type="Script" path="res://addons/terrain2d/terrain2d.gd" id="1_4e1y4"]
+[ext_resource type="Texture2D" uid="uid://djwt5h67r2dn8" path="res://icon.svg" id="2_vtu1j"]
 
 [node name="Demo" type="Node2D"]
 
@@ -8,3 +9,6 @@
 texture_repeat = 2
 polygon = PackedVector2Array(-22, 172, 109, 179, 146, 205, 194, 233, 218, 303, 216, 350, 159, 366, 105, 371, 82, 410, 93, 493, 214, 548, 388, 570, 610, 572, 754, 580, 835, 500, 912, 508, 962, 497, 1009, 518, 1052, 505, 1095, 535, 1151, 553, 1169, 561, 1173, 681, -38, 683)
 script = ExtResource("1_4e1y4")
+_border_smooth = 0.656
+_border_overlap = 16.0
+_textures = Array[Texture]([ExtResource("2_vtu1j")])
