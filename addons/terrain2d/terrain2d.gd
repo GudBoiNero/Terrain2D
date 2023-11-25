@@ -36,11 +36,23 @@ extends Polygon2D
 @export var _fill_material: ShaderMaterial
 #endregion EXPORTS
 
-@onready var border: Polygon2D = new()
-@onready var fill: Polygon2D = new()
+# Contains children- all Polygon2D- which are frequently deleted and created to render.
+@onready var borders: Node2D = null
+@onready var fill: Node2D = null
 
 #region METHODS
+func prepare_nodes() -> void:
+	borders = Node2D.new()
+	fill = Node2D.new()
 
+	add_child(borders)
+	add_child(fill)
+
+func update_borders() -> void:
+	pass
+
+func update_fill() -> void:
+	pass
 #endregion METHODS
 
 #region NATIVE OVERLOADS
@@ -49,7 +61,12 @@ func _enter_tree() -> void:
 
 
 func _init() -> void:
-	pass
+	prepare_nodes()
+
+
+func _draw() -> void:
+	update_borders()
+	update_fill()
 
 
 func _ready() -> void:
